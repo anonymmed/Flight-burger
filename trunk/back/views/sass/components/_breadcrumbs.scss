@@ -1,0 +1,22 @@
+/* 09. Breadcrumbs
+   ========================================================================== */
+
+.breadcrumb {
+	background-color: $gray-lighter;
+}
+
+.breadcrumb-2 {
+	background-color: transparent;
+	padding-left: 0;
+}
+
+.breadcrumb-3 {
+	border: solid 1px $gray-light;
+	background-color: transparent;
+}
+
+.breadcrumb i.fa { margin-right: 6px; }
+
+.breadcrumb > .active {
+	color: $base-color;
+}

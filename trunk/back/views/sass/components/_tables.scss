@@ -1,0 +1,180 @@
+/* 15. Tables
+   ========================================================================== */
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border-top: 1px solid $gray-light;
+      }
+    }
+  }
+  > thead > tr > th {
+     text-transform: uppercase;
+     font-weight: 600;
+	 border-bottom: 2px solid $gray-light;
+  }
+  > tbody + tbody {
+    border-top: 2px solid $gray-light;
+  }
+}
+
+.table-bordered {
+  border: 1px solid $gray-light;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 1px solid $gray-light;
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 2px;
+    }
+  }
+}
+
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $gray-light;
+  }
+}
+
+.table-separate {
+	th, td {
+	  border-bottom: solid 25px $gray-light; 
+	}
+	& tbody tr:last-child td {
+	  border-width: 0;
+	}
+}
+
+.table-unbordered {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border-top: 0 none;
+      }
+    }
+  }
+}
+
+
+
+.table-users {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th {
+        padding: 8px;
+      }
+      > td {
+        padding: 28px 8px;
+      }
+    }
+  }
+}
+
+.fluid-row .table-users {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        &:first-child{
+          padding-left: 25px;
+        }
+        &:last-child {
+          padding-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+
+.table-hover > tbody > tr:hover {
+  background-color: $gray-light;
+}
+
+.table-users img.avatar {
+	margin: -18px 0;
+}
+
+table.table-mails {
+	margin-bottom: 0;
+	
+	tr td {
+		padding: 12px;
+		
+		&.mail-select {
+			padding-left: 20px;
+		}
+		&:last-of-type {
+			padding-right: 20px;
+		}
+	}
+}
+
+
+.fluid-row {
+	margin-left: -25px;
+	margin-right: -25px;
+}
+
+
+tr:last-child td:last-child .dropdown-menu {
+	bottom: 100%;
+	top: auto;
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.size-40 { width: 40px; }
+.size-60 { width: 60px; }
+.size-80 { width: 80px; }
+
+a.more-link {
+	display: inline-block;
+	@include transition(all 250ms ease 0s);
+	@include border-radius(50%);
+	padding: 4px 5px;
+	color: $base-color;
+	margin: -5px 0;
+}
+
+a.more-link + .dropdown-menu { margin-top: 8px; }
+
+
+a.more-link:foucs {
+	color: $base-color;
+}
+
+a.more-link:hover,
+.open  a.more-link {
+	background-color: $brand-primary;
+	color: $gray-base;
+}
+
+
+@media screen and (max-width: $screen-xs-max) {
+	
+	.table-responsive.fluid-row {
+		 margin-right: 0; 
+		 margin-left: 0; 
+	}
+	
+}

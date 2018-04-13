@@ -1,0 +1,32 @@
+/* 14. Popover
+   ========================================================================== */
+
+.popover-title {
+	font-weight: 600;
+	background-color: $gray;
+	border-color: $gray;
+	color: $base-color;
+}
+
+.popover {
+	font-family: $font-family-base;
+	background-color: $gray-lighter;
+	border-color: $gray;
+	padding: 0;
+}
+
+.popover.bottom > .arrow:after {
+	border-bottom-color: $gray;
+}
+
+.popover.top > .arrow:after {
+    border-top-color: $gray;
+}
+
+.popover.right > .arrow:after {
+    border-right-color: $gray;
+}
+
+.popover.left > .arrow:after {
+    border-left-color: $gray;
+}

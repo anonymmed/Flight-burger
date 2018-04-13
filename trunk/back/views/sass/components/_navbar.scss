@@ -1,0 +1,61 @@
+/* 06. Navbars
+   ========================================================================== */
+   
+.navbar-default {
+	 background-color: $gray-light;
+	 border-color: $gray-lighter;
+	 .navbar-brand {
+	 	color: $base-color;
+		&:hover,
+		&:focus {
+		  color: $link-color;
+		  background-color: $gray-lighter;
+		}
+	 }
+	 .navbar-nav {
+		> li > a {
+		  color: $base-color;
+
+		  &:hover,
+		  &:focus {
+			color: $link-color;
+			background-color: $gray-lighter;
+		  }
+        }
+	  > .active > a {
+      &,
+      &:hover,
+      &:focus {
+          color: $link-color;
+          background-color: $gray-lighter;
+        }
+      }
+	  > .active,
+	  > .open {
+		  > a, 
+		  > a:hover, 
+		  > a:focus {
+			  background-color: $gray-lighter;
+			  color: $base-color;
+		}
+	  }
+	}
+	
+}
+
+
+.navbar-inverse {
+  background-color: $gray;
+  border-color: $gray-light;
+ .navbar-nav {
+	  > .active,
+	  > .open {
+		  > a, 
+		  > a:hover, 
+		  > a:focus {
+			  background-color: $gray-base;
+			  color: $base-color;
+		}
+	  }
+ }
+}
